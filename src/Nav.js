@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import NavLink from './NavLink'
 export default function Nav(props) {
     const [bgColor, setBgColor] = useState(props.color1)
     const changeBg = ()=>{
@@ -11,8 +12,8 @@ export default function Nav(props) {
         }
     }
     return (
-        <div onMouseOver={changeBg} style={{height:'100px',width:'100%', backgroundColor:bgColor}}>
-            
+        <div style={{height:'100px',width:'100%', backgroundColor:bgColor,display:'flex',justifyContent:'flex-end', alignItems:'center'}}>
+            {NavLink('Link 1')}
         </div>
     )
 }
